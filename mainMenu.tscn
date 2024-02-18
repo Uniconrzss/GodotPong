@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0xc2v4wgfdst"]
+
+[ext_resource type="FontFile" uid="uid://ci2ifup6ejxyl" path="res://pixels.ttf" id="1_xfqeb"]
+[ext_resource type="Texture2D" uid="uid://dwobcp8fe265f" path="res://selector.png" id="2_nf2st"]
+[ext_resource type="Script" path="res://Selector.cs" id="3_1iiom"]
+[ext_resource type="Texture2D" uid="uid://m3m0jspx3hlc" path="res://grossTexture.png" id="4_6l8lb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_inefj"]
+font = ExtResource("1_xfqeb")
+font_size = 72
+
+[sub_resource type="LabelSettings" id="LabelSettings_3q3dy"]
+font = ExtResource("1_xfqeb")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_cshsk"]
+font = ExtResource("1_xfqeb")
+font_size = 48
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_atv1i"]
+blend_mode = 2
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_top = 52.0
+offset_right = 1150.0
+offset_bottom = 187.0
+text = "Pong"
+label_settings = SubResource("LabelSettings_inefj")
+horizontal_alignment = 1
+
+[node name="Play" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 534.0
+offset_top = 186.0
+offset_right = 696.0
+offset_bottom = 294.0
+text = "Play"
+label_settings = SubResource("LabelSettings_3q3dy")
+horizontal_alignment = 1
+
+[node name="Exit" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 537.0
+offset_top = 291.0
+offset_right = 685.0
+offset_bottom = 360.0
+text = "Exit"
+label_settings = SubResource("LabelSettings_cshsk")
+horizontal_alignment = 1
+
+[node name="Selector" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 0
+offset_left = 497.0
+offset_top = 192.0
+offset_right = 528.0
+offset_bottom = 223.0
+texture = ExtResource("2_nf2st")
+script = ExtResource("3_1iiom")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_atv1i")
+position = Vector2(577.719, 323.781)
+scale = Vector2(18.0088, 10.0557)
+texture = ExtResource("4_6l8lb")
